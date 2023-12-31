@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>¡Please say Yes! ;D</title>
+        <link rel="icon" href="img/favicon.ico" type="img/x-icon">
+        <link rel="stylesheet" href="css/invitation.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div>
+                <h1 class = "header_text">Would you like to be my partner all this 2024 for practicing <br> spanish and french and more?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media4.giphy.com/media/SvvfK2dco188Wk4ZTq/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button> <!--Catch th FUNCTIONS on dinamic things-->
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+    </body> 
+</html>
